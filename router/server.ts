@@ -1,11 +1,12 @@
+// NOTE: This helper module exports a function that returns a configured express
+// NOTE: server object.
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const flash = require('connect-flash')
-
 const express = require('express')
+
 const server = express()
-server.set('view engine', 'ejs')
 
 const allowCrossDomain = (_req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'example.com')
